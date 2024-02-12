@@ -1,14 +1,14 @@
 package com.intro_java.classe;
 
 public class Vehicule {
-    private String nom;
+    private String name;
     private int nbreRoue;
     private int vitesse;
 
     public Vehicule(){}
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String nom) {
+        this.name = nom;
     }
 
     public void setNbreRoue(int nbreRoue) {
@@ -19,8 +19,8 @@ public class Vehicule {
         this.vitesse = vitesse;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
     public int getNbreRoue() {
@@ -32,7 +32,7 @@ public class Vehicule {
     }
 
     public Vehicule(String nom, int nbreRoue, int vitesse){
-        this.nom = nom;
+        this.name = nom;
         this.nbreRoue = nbreRoue;
         this.vitesse = vitesse;
 
@@ -43,14 +43,16 @@ public class Vehicule {
     }
 
     public String method(){
-        if ( this.nom ==="voiture"){
+        if ( this.nbreRoue == 4){
             return "voiture";
-        } else if (this.nom === "moto") {
+        } else if ( this.nbreRoue == 2) {
             return "moto";
         } else  {
             return "autre";
         }
+    }
 
-
+    public String  plusRapide( Vehicule vehicule){
+        return this.vitesse > vehicule.getVitesse() ? this.getName()+ " et " + this.getVitesse() : vehicule.getName() + " et " + vehicule.vitesse;
     }
 }

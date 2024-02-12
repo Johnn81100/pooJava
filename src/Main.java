@@ -1,4 +1,5 @@
 import com.intro_java.classe.Habitation;
+import com.intro_java.classe.Vehicule;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -26,9 +27,35 @@ public class Main {
            /* scanner.nextLine();*/
             System.out.println(habitation2.getNom() + "à une surface de :" + habitation2.Surface() + "m²");
             ArrayList<Habitation> listHabition =  new ArrayList<>();
-            for (Hab hab : listHabition) {
+            listHabition.add(habitation);
+            listHabition.add(habitation1);
+            listHabition.add(habitation2);
+
+            for (Habitation hab : listHabition) {
                 System.out.println(hab.getNom() + "à une surface de :" + hab.Surface() + "m²");
             }
+            Vehicule vehicule = new Vehicule("Ibiza", 4,180);
+            Vehicule vehicule1 = new Vehicule("traffic", 6,150);
+            Vehicule vehicule2 = new Vehicule("trike", 3,50);
+            Vehicule vehicule3 = new Vehicule("ducati", 2,230);
+            Vehicule vehicule4 = new Vehicule("Megane", 4,180);
+            ArrayList<Vehicule> listVehicule =  new ArrayList<>();
+            listVehicule.add(vehicule);
+            listVehicule.add(vehicule1);
+            listVehicule.add(vehicule2);
+            listVehicule.add(vehicule3);
+            listVehicule.add(vehicule4);
+            for(Vehicule vec: listVehicule){
+                vec.boost();
+                System.out.println(vec.getName()+ " est de type " + vec.method());
+                System.out.println(vec.getName()+ " possède une vitesse de " + vec.getVitesse());
+                System.out.println( vec.plusRapide(vehicule3));
+            }
+
+
+
+
+
 
 
         }

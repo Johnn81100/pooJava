@@ -5,9 +5,15 @@ public class Habitation {
     private double longueur;
     private double largeur;
 
-    private int  nbreEtage;
+    private int  nbreEtage= 1;
 
     public Habitation(){}
+    public Habitation(String nom, double longueur, double largeur){
+        this.nom = nom;
+        this.longueur= longueur;
+        this.largeur= largeur;
+
+    }
     public Habitation(String nom, double longueur, double largeur, int nbreEtage){
         this.nom = nom;
         this.longueur= longueur;
