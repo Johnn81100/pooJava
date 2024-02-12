@@ -17,12 +17,17 @@ public class Assassin extends Personnage{
      this.bonusAttaque = bonusAttaque;
  }
 
-    public int attaquer(Personnage personnage){
+    public void attaquer(Personnage personnage){
         long random = Math.round(Math.random()*100);
-        if(random % 20 == 0) {
-            return personnage.getVie() - ((this.getAttaque() + this.getBonusAttaque()) - personnage.getDefense());
+        if( this.getAttaque() - personnage.getDefense() < 0)
+        {
+            personnage.setVie(personnage.getVie());
+        }
+        else if(random % 20 == 0) {
+            personnage.setVie(personnage.getVie() - ((this.getAttaque() + this.getBonusAttaque()) - personnage.getDefense()));
         }else {
-            return personnage.getVie() - (this.getAttaque() - personnage.getDefense());
+            System.out.println(personnage.getVie() - (this.getAttaque() - personnage.getDefense()));
+             personnage.setVie( personnage.getVie() - (this.getAttaque() - personnage.getDefense()));
         }
     }
 

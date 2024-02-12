@@ -1,6 +1,4 @@
-import com.intro_java.classe.Habitation;
-import com.intro_java.classe.Personnage;
-import com.intro_java.classe.Vehicule;
+import com.intro_java.classe.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -41,6 +39,12 @@ public class Main {
                 System.out.println(vec.getName() + " possède une vitesse de " + vec.getVitesse());
                 System.out.println(vec.plusRapide(vehicule3));
             }
+            Assassin assassin = new Assassin("Rogue", 1, 1, 1, 0);
+            Guerrier guerrier = new  Guerrier("War", 150, 40, 25, 50);
+            Partie partie = new Partie( assassin, guerrier,20);
+            System.out.println( partie.lancerLaPartie());
+
+
 
 
 

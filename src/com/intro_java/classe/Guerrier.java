@@ -15,12 +15,17 @@ public class Guerrier extends Personnage {
     public void setBonusDefense(int bonusDefense) {
         this.bonusDefense = bonusDefense;
     }
-    public int attaquer(Personnage personnage){
+    public void attaquer(Personnage personnage){
         long random = Math.round(Math.random()*100);
+        if( this.getAttaque() - personnage.getDefense() < 0)
+        {
+            personnage.setVie(personnage.getVie());
+        }
+
         if(random % 20 == 0) {
             this.setVie(this.getVie()+ getBonusDefense());
         }
-            return personnage.getVie() - (this.getAttaque() - personnage.getDefense());
+          personnage.setVie(personnage.getVie() - (this.getAttaque() - personnage.getDefense()));
 
     }
 

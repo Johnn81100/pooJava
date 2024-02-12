@@ -34,6 +34,7 @@ public class Personnage {
 
     public void setVie(int vie) {
         this.vie = vie;
+
     }
 
     public void setDefense(int defense) {
@@ -48,10 +49,15 @@ public class Personnage {
     public void setAttaque(int attaque) {
         this.attaque = attaque;
     }
-    public int  attaquer(Personnage personnage){
-        return personnage.getVie() - (this.getAttaque() - personnage.getDefense());
+    public void attaquer(Personnage personnage){
+        if( this.getAttaque() - personnage.getDefense() < 0)
+        {
+           personnage.setVie(personnage.getVie());
+
+        }
+        else {
+           personnage.setVie(personnage.getVie() - (this.getAttaque() - personnage.getDefense()));
+        }
     }
-
-
 
 }
