@@ -16,9 +16,9 @@ public class Main {
             Exemple test1 = new Exemple("Gau","Jonathan", 37);
             System.out.println(test);*/
 
-            Habitation habitation= new Habitation("maison",  6.00 , 5.00);
-            Habitation habitation1= new Habitation("chalet",  7.00 , 5.00);
-            Habitation habitation2= new Habitation("cabane",  6.00 , 9.00);
+            Habitation habitation= new Habitation("maison",  6.00 , 5.00, 2);
+            Habitation habitation1= new Habitation("chalet",  7.00 , 5.00, 4);
+            Habitation habitation2= new Habitation("cabane",  6.00 , 9.00, 1);
             Scanner scanner = new Scanner(System.in);
             System.out.println(habitation.getNom() + "à une surface de :" + habitation.Surface() + "m²");
             /*scanner.nextLine();*/
@@ -26,10 +26,9 @@ public class Main {
            /* scanner.nextLine();*/
             System.out.println(habitation2.getNom() + "à une surface de :" + habitation2.Surface() + "m²");
             ArrayList<Habitation> listHabition =  new ArrayList<>();
-            listHabition.forEach((hab) ->
-                    System.out.println(hab.getNom() + "à une surface de :" + hab.Surface() + "m²")
-
-        );
+            for (Hab hab : listHabition) {
+                System.out.println(hab.getNom() + "à une surface de :" + hab.Surface() + "m²");
+            }
 
 
         }

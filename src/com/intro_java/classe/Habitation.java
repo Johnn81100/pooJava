@@ -2,14 +2,25 @@ package com.intro_java.classe;
 
 public class Habitation {
     private String nom;
-    private Double longueur;
-    private Double largeur;
+    private double longueur;
+    private double largeur;
+
+    private int  nbreEtage;
 
     public Habitation(){}
-    public Habitation(String nom, Double longueur, Double largeur){
+    public Habitation(String nom, double longueur, double largeur, int nbreEtage){
         this.nom = nom;
         this.longueur= longueur;
         this.largeur= largeur;
+        this.nbreEtage = nbreEtage;
+    }
+
+    public void setNbreEtage(int nbreEtage) {
+        this.nbreEtage = nbreEtage;
+    }
+
+    public int getNbreEtage() {
+        return nbreEtage;
     }
 
     public void setNom(String nom) {
@@ -19,23 +30,23 @@ public class Habitation {
         return nom;
     }
 
-    public void setLongueur(Double longueur) {
+    public void setLongueur(double longueur) {
         this.longueur = longueur;
     }
-    public Double getLongueur() {
+    public double getLongueur() {
         return longueur;
     }
 
-    public void setLargeur(Double largeur) {
+    public void setLargeur(double largeur) {
         this.largeur = largeur;
     }
 
-    public Double getLargeur() {
+    public double getLargeur() {
         return largeur;
     }
 
-    public Double Surface(){
-        return  this.largeur * this.longueur;
+    public double Surface(){
+        return  (this.largeur * this.longueur)* this.nbreEtage;
     }
 
 }
