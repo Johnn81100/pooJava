@@ -1,3 +1,8 @@
+import com.intro_java.classe.Habitation;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
         public static  void main(String[] args) {
            /* Scanner scanner  = new Scanner(System.in);
@@ -7,9 +12,24 @@ public class Main {
 
             System.out.println(average(5,10,7,3));
             System.out.println(reverseNumber(5,10));*/
-            Exemple test = new Exemple();
+            /*Exemple test = new Exemple();
             Exemple test1 = new Exemple("Gau","Jonathan", 37);
-            System.out.println(test);
+            System.out.println(test);*/
+
+            Habitation habitation= new Habitation("maison",  6.00 , 5.00);
+            Habitation habitation1= new Habitation("chalet",  7.00 , 5.00);
+            Habitation habitation2= new Habitation("cabane",  6.00 , 9.00);
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(habitation.getNom() + "à une surface de :" + habitation.Surface() + "m²");
+            /*scanner.nextLine();*/
+            System.out.println(habitation1.getNom() + "à une surface de :" + habitation1.Surface() + "m²");
+           /* scanner.nextLine();*/
+            System.out.println(habitation2.getNom() + "à une surface de :" + habitation2.Surface() + "m²");
+            ArrayList<Habitation> listHabition =  new ArrayList<>();
+            listHabition.forEach((hab) ->
+                    System.out.println(hab.getNom() + "à une surface de :" + hab.Surface() + "m²")
+
+        );
 
 
         }

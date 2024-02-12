@@ -1,7 +1,7 @@
 public class Exemple {
     private String name;
     private String value;
-    private int nbr;
+    private Integer nbr;
     public Exemple(){}
     public Exemple(String name, String value, int nbr){
         this.name = name;
@@ -22,4 +22,12 @@ public class Exemple {
     public void  setValue(String value ){
         this.value= value;
     }
+
+    public Integer getNbr(){
+        return this.nbr;
+    }
+    public void setNbr(Integer nbr){
+        this.nbr = nbr;
+    }
+
 }
