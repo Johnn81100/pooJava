@@ -42,16 +42,22 @@ public class Main {
             Assassin assassin = new Assassin("Rogue", 1, 1, 1, 0);
             Guerrier guerrier = new  Guerrier("War", 150, 40, 25, 50);
             Partie partie = new Partie( assassin, guerrier,20);
-            System.out.println( partie.lancerLaPartie());
-            Flash flash = new Flash("War", 150, 40, 150);
-            Batman batman = new Batman("War", 200, 40, 25);
-            Superman superman = new Superman("War", 200, 40, 25);
-            flash.attaquer(batman);
+            /*System.out.println( partie.lancerLaPartie());*/
+            Flash flash = new Flash("Flash", 150, 40, 500, 1);
+            Batman batman = new Batman("Batman", 200, 40, 100,1);
+            Superman superman = new Superman("Superman", 200, 40, 25, 1);
+          /*  flash.attaquer(batman);
             batman.attaquer(superman);
             superman.attaquer(flash);
             System.out.println(batman.getVie());
             System.out.println(superman.getVie());
-            System.out.println(flash.getVie());
+            System.out.println(flash.getVie());*/
+
+            Partie partie2 = new Partie( flash, batman,20);
+            System.out.println(partie2.lancerLaPartie());
+
+
+
 
 
 

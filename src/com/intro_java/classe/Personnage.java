@@ -50,13 +50,15 @@ public class Personnage {
         this.attaque = attaque;
     }
     public void attaquer(Personnage personnage){
-        if( this.getAttaque() - personnage.getDefense() < 0)
+        if( this.getAttaque() < personnage.getDefense() )
         {
            personnage.setVie(personnage.getVie());
+
 
         }
         else {
            personnage.setVie(personnage.getVie() - (this.getAttaque() - personnage.getDefense()));
+
         }
     }
 

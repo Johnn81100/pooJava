@@ -1,6 +1,6 @@
 package com.intro_java.classe;
 
-public class Partie {
+public class Partie  {
 
     private Personnage joueur1;
     private Personnage joueur2;
@@ -38,13 +38,10 @@ public class Partie {
 
     public  String lancerLaPartie(){
         while ( this.nbreDeTour > 0 ){
-
             this.joueur1.attaquer(this.joueur2);
             this.joueur2.attaquer(this.joueur1);
-            System.out.println(this.joueur1.getVie());
-            System.out.println(this.joueur2.getVie());
             this.nbreDeTour-- ;
-            if( this.joueur1.getVie() == 0 || this.joueur2.getVie() == 0){
+            if( this.joueur1.getVie() < 0 || this.joueur2.getVie() < 0){
                 this.nbreDeTour = 0;
             }
         }
