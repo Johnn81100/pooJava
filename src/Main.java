@@ -43,7 +43,15 @@ public class Main {
             Guerrier guerrier = new  Guerrier("War", 150, 40, 25, 50);
             Partie partie = new Partie( assassin, guerrier,20);
             System.out.println( partie.lancerLaPartie());
-
+            Flash flash = new Flash("War", 150, 40, 150);
+            Batman batman = new Batman("War", 200, 40, 25);
+            Superman superman = new Superman("War", 200, 40, 25);
+            flash.attaquer(batman);
+            batman.attaquer(superman);
+            superman.attaquer(flash);
+            System.out.println(batman.getVie());
+            System.out.println(superman.getVie());
+            System.out.println(flash.getVie());
 
 
 
